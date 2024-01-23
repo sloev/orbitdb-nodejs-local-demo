@@ -5,7 +5,7 @@ import { createOrbitDB } from '@orbitdb/core'
 import { IPFSAccessController } from '@orbitdb/core'
 import { LevelBlockstore } from 'blockstore-level'
 import { gossipsub } from '@chainsafe/libp2p-gossipsub'
-
+import { mdns } from '@libp2p/mdns'
 
 
 
@@ -24,6 +24,11 @@ const main = async () => {
     `/ip6/::/tcp/${PORT}`,
     '/webrtc']
   }
+  
+  config.peerDiscovery = [
+    mdns()
+  ]
+  
   console.log(`running with port:${PORT} and ${DIRECTORY}`)
   config.services.pubsub = gossipsub({ allowPublishToZeroPeers: true })
 
