@@ -38,6 +38,8 @@ entry { op: 'ADD', key: null, value: 'hello from ./FOOBARBAZ 3' }
 
 ## errors
 
+see this issue on orbitdb https://github.com/orbitdb/orbitdb/issues/1154
+
 ```
 r➜  saysheep node server.js 13245 FOOBAR  /orbitdb/zdpuAkn4eb7Xdy5UFCvFGEcYd5HDhufhJHWAgYgVMpWK7U5wF
 running with port:13245 and ./FOOBAR
